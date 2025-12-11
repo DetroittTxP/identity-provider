@@ -1,0 +1,32 @@
+{
+    "realm": "opsta",
+    "enabled": true,
+    "clients": [
+        {
+            "clientId": "opsta",
+            "secret": "J1ekpX29neX08Kzf1N6nLtLEqOMczGQi",
+            "publicClient": false,
+            "directAccessGrantsEnabled": true,
+            "serviceAccountsEnabled": true,
+            "standardFlowEnabled": true,
+            "redirectUris": [
+                "*"
+            ],
+            "baseUrl": "http://localhost:8000",
+            "adminUrl": ""
+        }
+    ],
+    "users": [
+        {
+            "username": "opsta",
+            "enabled": true,
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "password",
+                    "temporary": false
+                }
+            ]
+        }
+    ]
+}
