@@ -37,7 +37,7 @@ services:
             vpc_network:
                 ipv4_address: 172.20.0.10
         extra_hosts:
-            - "pond.dev.internal:host-gateway"
+            - "parames-macbook-air:host-gateway"
 
     ui:
         container_name: ui
@@ -57,6 +57,9 @@ services:
             - .env
         networks:
             - vpc_network
+        extra_hosts:
+          - "parames-macbook-air:host-gateway"
+    
     service-a:
         container_name: service-a
         build:
@@ -74,6 +77,8 @@ services:
             - .env
         networks:
             - vpc_network
+     
+
     service-b:
         container_name: service-b
         build:
@@ -91,6 +96,7 @@ services:
             - .env
         networks:
             - vpc_network
+    
 volumes:
     postgres:
         driver: local

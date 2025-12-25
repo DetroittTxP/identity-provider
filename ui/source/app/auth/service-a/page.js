@@ -1,6 +1,6 @@
 "use client";
-import useSWR from "swr";
 import { useSession } from "next-auth/react";
+import useSWR from "swr";
 
 
 export default function ServiceA() {
@@ -15,7 +15,7 @@ export default function ServiceA() {
         }
     }).then((res) => res.json());
 
-    const { data, error, isLoading } = useSWR("http://localhost:8001/api/data", fetcher);
+    const { data, error, isLoading } = useSWR("http://100.99.192.99:8001/api/data", fetcher);
 
     if (error) return "An error has occurred.";
     if (isLoading) return "Loading...";
