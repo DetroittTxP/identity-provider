@@ -11,7 +11,7 @@ export default function Logout({ keycloak }) {
                         callbackUrl:
                             keycloak +
                             "/protocol/openid-connect/logout?post_logout_redirect_uri=" +
-                            encodeURIComponent("http://parames-macbook-air:8000") + "&client_id=web"
+                            encodeURIComponent("http://parames-macbook-air:8000") + "&client_id=opsta"
                     })
                 }
             >

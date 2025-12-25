@@ -77,6 +77,8 @@ services:
             - .env
         networks:
             - vpc_network
+        extra_hosts:
+          - "parames-macbook-air:host-gateway"
      
 
     service-b:
@@ -96,6 +98,8 @@ services:
             - .env
         networks:
             - vpc_network
+        extra_hosts:
+          - "parames-macbook-air:host-gateway"
     
 volumes:
     postgres:
