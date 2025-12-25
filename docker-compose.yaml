@@ -36,6 +36,8 @@ services:
         networks:
             vpc_network:
                 ipv4_address: 172.20.0.10
+        extra_hosts:
+            - "pond.dev.internal:host-gateway"
 
     ui:
         container_name: ui
